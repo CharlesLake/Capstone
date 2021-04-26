@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Perfect Game</title>
+        <style>
+            body{
+                background-image: url('black_background.jpg');
+                background-repeat: no-repeat;
+                background-attachment: local;
+                background-size: 100% 100%;
+            }
+            
+            img{
+                width: 400px;
+                display: block;
+                border-radius: 10px;
+                margin-left:auto;
+                margin-right: auto;
+            }
+            /* Slideshow container */
+            .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            }
+
+            /* Caption text */
+            .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+
+            .active {
+            background-color: #717171;
+            }
+            
+            
+            
+    </style>
+
+    </head>
+    <body style="background-color:black;">
+        <h2 style="color: white; font-size: 40px;text-align: center;"> Finding New Games to play for you</h2>
+        
+        <div class="slideshow-container"></div>
+        <div class="mySlides fade">
+            
+            <img src="hd_gmaing.jpg" style="width:50%">
+            
+          </div>
+        <div class="mySlides fade">
+            
+            <img src="ps4_gaming.jpg" style="width:50%">
+            
+          </div>
+        <div class="mySlides fade">
+            
+            <img src="xbox_gaming.jpg" style="width:50%">
+            
+          </div>  
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        <p style="color: white; font-size: 25px ; text-align: center;"> With the rise in gaming due to our current global situation, both new and old gamers are running out of games
+        to play and watch. This website is designed to help you find games like you are already playing and place where you can meet new people who enjoy the same games as you!  </p>
+        <div id = "Home" class="tabcontent">
+            <h1 style="color: white;"><a href="index.html"style="text-decoration:underline;color: #FFF;">Home</a></h1>
+            <p style="color: white; font-size: 25px;">This is an overview of the website</p>
+
+        </div>
+        
+        <br>
+        <br>
+        <div id = "Game Types" class="tabcontent">
+            <h2 style="color: white;"><a href="types.html"style="text-decoration:underline;color: #FFF;">Game Types</a></h1>
+                <p style="color: white; font-size: 25px;">This breaks down the different types of games and what games are found in each category </p>
+
+        </div>
+        <br>
+        <br>
+        <div id = "Communities" class="tabcontent">
+            <h2 style="color: white;"><a href="communities.html"style="text-decoration:underline;color: #FFF;">Communities</a></h1>
+                <p style="color: white; font-size: 25px;">This offers communitiesfor new players to learn and meet friends. </p>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div id = "Streamers" class="tabcontent">
+            <h2 style="color: white;"><a href="types.html"style="text-decoration:underline;color: #FFF;">Streamers</a></h1>
+                <p style="color: white; font-size: 25px;">This shows streamers in each Game Type so you can watch, learn and interact with people who know the game. </p>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 3000); // Change image every 3 seconds
+            }
+
+        </script>
+
+        
+       
+
+        
+        
+        
+    </body>
+</html>
